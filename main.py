@@ -81,3 +81,12 @@ while is_not_even:
     if rnd_num % 2 == 0:
         is_not_even = False
     print(rnd_num)
+
+print("---------------------------------")
+
+#vidinis ciklas atidirba ir tada pasileidžia išorinis ciklas (toliau)
+
+for y in range(1,11): #1
+     for x in range(1,11):
+         print(y * x, end=" ") #po tokio reikia padaryt tuscia printa, nes kitu atveju naujas printas bus atvaizduotas pries tai buvusios eilutes gale
+    print()
