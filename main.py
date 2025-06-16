@@ -277,7 +277,7 @@ if rezultatas == 0:
     print("skaičius")
 
 
-.
+
 
 
 
