@@ -269,12 +269,24 @@ print(" ---------------------------- sunkesni 5 užduotis ----------------------
 # b) Tris kartus iškritus herbui;
 # c) Tris kartus iš eilės iškritus herbui;
 
+herbas = 0
+skaičius = 1
 
-rezultatas = random.randint(0,1)
-if rezultatas == 0:
-    print("herbas")
-    else:
-    print("skaičius")
+while True:
+    rezultatas = random.randint(0, 1)
+    if rezultatas == 0:
+        print("H")
+        break
+else:
+    print("S")
+
+while True:
+    rezultatas = random.randint(0, 1)
+    if rezultatas == 0:
+        print("H")
+        # break
+else:
+    print("S")
 
 
 
