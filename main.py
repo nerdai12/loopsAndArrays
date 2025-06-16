@@ -141,7 +141,7 @@ print(" ---------------------------- 6 užduotis -----------------------------")
 
 #Atspausdinkite kas antrą skaičių nuo 10 iki 50 (porinius);
 
-for i in range(10,50):
+for i in range(10,51):
     if i % 2 == 0:
         print(i)
 
@@ -208,10 +208,76 @@ for plant in plants:
 
 print("žodžių, kurie ilgesni nei 5 simboliai, bet trumpesni nei 10 simbolių yra ", count)
 
+print()
+
+print(" ---------------------------- sunkesni 1 užduotis -----------------------------")
+
+#Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.
+# Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “
+
+nums = [random.randint(0,300) for num in range(300)]
+print(nums, end=" ")
+print()
 
 
+print()
+
+print(" ---------------------------- sunkesni 2 užduotis -----------------------------")
+
+#Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos.
+# Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti
 
 
+for num in range(1,3001):
+    if num % 77 == 0:
+       print(num, end = ", ")
+text = "77, 154, 231, 308, 385, 462, 539, 616, 693, 770, 847, 924, 1001, 1078, 1155, 1232, 1309, 1386, 1463, 1540, 1617, 1694, 1771, 1848, 1925, 2002, 2079, 2156, 2233, 2310, 2387, 2464, 2541, 2618, 2695, 2772, 2849, 2926,"
+print(text[:-1])
+
+print()
+
+print(" ---------------------------- sunkesni 3 užduotis -----------------------------")
+
+#Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
+
+
+for y in range(25):
+    for x in range(25):
+        print("*", end=" ")
+    print()
+
+print()
+
+print(" ---------------------------- sunkesni 4 užduotis -----------------------------")
+
+#Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
+
+for y in range(25):
+    for x in range(25):
+        if x == y or x == (25 -1 - y):
+            print("-", end = " ")
+        else:
+              print("*", end = " ")
+    print()
+
+print(" ---------------------------- sunkesni 5 užduotis -----------------------------")
+
+#Metam monetą. Monetos kritimo rezultatą imituojam random.randint(x,x) funkcija, kur 0 yra herbas, o 1 - skaičius.
+# Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+# Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+# a) Iškritus herbui;
+# b) Tris kartus iškritus herbui;
+# c) Tris kartus iš eilės iškritus herbui;
+
+
+rezultatas = random.randint(0,1)
+if rezultatas == 0:
+    print("herbas")
+    else:
+    print("skaičius")
+
+
+.
 
 
 
