@@ -1,6 +1,9 @@
-for i in range(5): #ciklas
+import random
+
+for i in range(5):  # [0,1,2,3,4] #ciklas
     print("labas")
     print("rytas")
+    print(i)
 
 print("zemiau ciklo")
 
@@ -29,3 +32,52 @@ print("----------------")
 print(len(games)) #pasako kiek yra elementu masyve
 for zaidimas in games:
     print("My favorite game is " + zaidimas)
+
+# i % 10 == 0 ar porinis ar ne
+
+count = 0
+for i in range(50):
+    print(i)
+    count+= 1
+
+print("prasisuko", count)
+
+for i in range(10):
+    if i % 2 == 0:
+        continue #jeigu (True) skaičius porinis, tai print nesuveiks. sustabdo ciklą
+        #break - sustoja, kai patenkinama sąlyga
+        print(i)
+
+#loop loop
+#while - suksis tol, kol bus patenkinta sąlyga. Jį naudojam tada, kai nežinom kiek kartų reikės prasukt ciklą
+
+
+counter = 0
+while True:
+    counter += 1
+    if counter >= 5:
+        break
+    print(counter)
+
+while True:
+    rnd_num = random.randint(1,6)
+    print(rnd_num)
+    if rnd_num == 1:
+        break
+
+print("---------------------------------")
+
+is_even = False
+
+while not is_even:
+    rnd_num = random.randint(1,10)
+    if rnd_num % 2 == 0:
+        is_even = True
+    print(rnd_num)
+
+is_not_even = True
+while is_not_even:
+    rnd_num = random.randint(1,10)
+    if rnd_num % 2 == 0:
+        is_not_even = False
+    print(rnd_num)
