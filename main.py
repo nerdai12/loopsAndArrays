@@ -395,6 +395,22 @@ print(" ---------------------------- sunkesni 8 užduotis ----------------------
 # (pasinaudokite random.randint(x,x) funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį.
 # Suskaičiuokite kiek reikia smūgių
 
+vinies_ilgis = 85 # 8.5 cm
+viso_smugiu = 0
+
+for vinis in range(1,6):
+    gylis = 0
+    smugiai = 0
+    print("vinies" + str(vinis) + " kalimas")
+
+    while gylis < vinies_ilgis:
+        smugis = random.randint(5, 20)
+        gylis += smugis
+        smugiai += 1
+        print("Smūgis", smugiai, ": įkaltas ", smugis, " mm (viso: ", min(gylis, vinies_ilgis), " mm)")
+    print("Vinies", vinis, "įkalimui reikėjo", smugiai, "smūgių")
+    viso_smugiu += smugiai
+print("Visoms vinims įkalti prireikė", viso_smugiu, "smūgių")
 
 
 
