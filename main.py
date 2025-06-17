@@ -364,7 +364,36 @@ while True:
 
 print("Žaidimą laimėjo: " + str(laimetojas))
 
+print()
 
+print(" ---------------------------- sunkesni 7 užduotis -----------------------------")
+
+#Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą
+# (https://lt.wikipedia.org/wiki/Rombas), kurio aukštis 21 eilutė
+
+aukstis = 21
+vidurys = aukstis // 2
+print(vidurys)
+
+for y in range(aukstis):
+    if y <= vidurys:
+        simbolis = 1 + y * 2
+        tarpas = (aukstis - simbolis) // 2
+    else:
+        simbolis = 1 +(aukstis - y - 1) * 2
+        tarpas = (aukstis - simbolis) // 2
+    print(" " * tarpas + "*" * simbolis)
+
+print()
+
+print(" ---------------------------- sunkesni 8 užduotis -----------------------------")
+
+#Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami random.randint(x,x) funkcija.
+# Vinies ilgis 8.5cm (pilnai sulenda į lentą)
+# a) “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+# b) “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė
+# (pasinaudokite random.randint(x,x) funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį.
+# Suskaičiuokite kiek reikia smūgių
 
 
 
