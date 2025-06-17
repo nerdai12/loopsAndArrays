@@ -450,4 +450,38 @@ for vinis in range(1,6):
     viso_dideliu_smugiu += smugiai
 print("Visoms vinims įkalti prireikė", viso_dideliu_smugiu, "smūgių")
 
+print()
+
+print(" ---------------------------- sunkesni 9 užduotis -----------------------------")
+
+#Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais.
+#Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu,
+# palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs).
+# Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio.
+# (reikės split() funkcijos ir masyvų.)
+
+skaiciai = random.sample(range(1,201),50)
+skaiciu_eilute = " ".join(map(str, skaiciai))
+print(skaiciu_eilute)
+# print(*nums, sep=" ")
+pirminiai = []
+for n in skaiciai:
+    if n < 2:
+        continue
+    pirminis = True
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            pirminis = False
+            break
+    if pirminis:
+        pirminiai.append(str(n))
+pirminiai_skaiciai = list(map(int, pirminiai))
+pirminiai_skaiciai.sort()
+pirminiai_surusiuoti = list(map(str, pirminiai_skaiciai))
+
+skaiciu_eilute_2 = " ".join(pirminiai_surusiuoti)
+print(skaiciu_eilute_2)
+
+
+
 
