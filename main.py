@@ -482,6 +482,14 @@ pirminiai_surusiuoti = list(map(str, pirminiai_skaiciai))
 skaiciu_eilute_2 = " ".join(pirminiai_surusiuoti)
 print(skaiciu_eilute_2)
 
+print()
+
+print(" ---------------------------- sunkesni 4.Masyvai 1 užduotis-----------------------------")
+
+#Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25
+
+masyvas = [random.randint(5,26) for _ in range(30)]
+print(masyvas)
 
 
 
