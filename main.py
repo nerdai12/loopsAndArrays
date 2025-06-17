@@ -396,24 +396,58 @@ print(" ---------------------------- sunkesni 8 užduotis ----------------------
 # Suskaičiuokite kiek reikia smūgių
 
 vinies_ilgis = 85 # 8.5 cm
-viso_smugiu = 0
+viso_mazu_smugiu = 0
+viso_dideliu_smugiu = 0
 
 for vinis in range(1,6):
     gylis = 0
     smugiai = 0
     print("vinies" + str(vinis) + " kalimas")
 
+    print("a)----------")
+
     while gylis < vinies_ilgis:
         smugis = random.randint(5, 20)
         gylis += smugis
         smugiai += 1
         print("Smūgis", smugiai, ": įkaltas ", smugis, " mm (viso: ", min(gylis, vinies_ilgis), " mm)")
-    print("Vinies", vinis, "įkalimui reikėjo", smugiai, "smūgių")
-    viso_smugiu += smugiai
-print("Visoms vinims įkalti prireikė", viso_smugiu, "smūgių")
+    print("Vinies ", vinis, "įkalimui reikėjo", smugiai, "smūgių")
+    viso_mazu_smugiu += smugiai
+print("Visoms vinims įkalti prireikė", viso_mazu_smugiu, "smūgių")
 
+print()
 
+print("b)----------")
 
+# for vinis in range(1,6):
+#     gylis = 0
+#     smugiai = 0
+#     print("vinies " + str(vinis) + " kalimas")
+#
+#     while gylis < vinies_ilgis:
+#         smugis = random.randint(20, 30)
+#         gylis += smugis
+#         smugiai += 1
+#         print("Smūgis", smugiai, ": įkaltas ", smugis, " mm (viso: ", min(gylis, vinies_ilgis), " mm)")
+#     print("Vinies ", vinis, "įkalimui reikėjo", smugiai, "smūgių")
+#     viso_dideliu_smugiu += smugiai
+# print("Visoms vinims įkalti prireikė", viso_dideliu_smugiu, "smūgių")
 
+for vinis in range(1,6):
+    gylis = 0
+    smugiai = 0
+    print("vinies " + str(vinis) + " kalimas")
+
+    while gylis < vinies_ilgis:
+        smugiai += 1
+        if random.randint(0,1) < 0.5:
+            print("Smūgis ", smugiai," nepataikė")
+            continue
+        smugis = random.randint(20, 30)
+        gylis += smugis
+        print("Smūgis", smugiai, ": įkaltas ", smugis, " mm (viso: ", min(gylis, vinies_ilgis), " mm)")
+    print("Vinies ", vinis, "įkalimui reikėjo", smugiai, "smūgių")
+    viso_dideliu_smugiu += smugiai
+print("Visoms vinims įkalti prireikė", viso_dideliu_smugiu, "smūgių")
 
 
