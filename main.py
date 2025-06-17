@@ -272,6 +272,7 @@ print(" ---------------------------- sunkesni 5 užduotis ----------------------
 herbas = 0
 skaičius = 1
 
+print("a)----------")
 while True:
     rezultatas = random.randint(0, 1)
     if rezultatas == 0:
@@ -280,13 +281,91 @@ while True:
 else:
     print("S")
 
-while True:
+print("b)-----------")
+
+herbu_kiekis = 0
+while herbu_kiekis < 3:
     rezultatas = random.randint(0, 1)
     if rezultatas == 0:
         print("H")
-        # break
-else:
-    print("S")
+        herbu_kiekis += 1
+        if herbu_kiekis == 3:
+            break
+    else:
+        print("S")
+
+print("c)---------------")
+
+herbai_is_eiles = 0
+while herbai_is_eiles < 3:
+    rezultatas = random.randint(0, 1)
+    if rezultatas == 0:
+        print("H")
+        herbai_is_eiles += 1
+        if herbai_is_eiles == 3:
+            break
+    else:
+        print("S")
+
+print()
+
+print(" ---------------------------- sunkesni 6 užduotis -----------------------------")
+
+#Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
+# Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”.
+# Taškų kiekį generuokite funkcija ​random.randint(x,x)​.
+# Žaidimą laimi tas, kas greičiau surenka 222 taškus. Partijas kartoti tol,
+# kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų
+
+Kazys = random.randint(10, 20)
+Petras = random.randint(5, 25)
+print("Kazys " + str(Kazys))
+print("Petras " + str(Petras))
+if Kazys > Petras:
+    print("Partiją laimėjo Kazys")
+elif Kazys < Petras:
+    print("Partiją laimėjo Petras")
+else   :
+    print("Lygiosios")
+
+print()
+
+petras_viso = 0
+kazys_viso = 0
+partijos_nr = 1
+
+while True:
+    petras_taskai = random.randint(10, 20)
+    kazys_taskai = random.randint(5, 25)
+
+    petras_viso += petras_taskai
+    kazys_viso += kazys_taskai
+
+    print(str(partijos_nr) + " partija – Petras: " + str(petras_taskai) + " (viso: " + str(petras_viso) + "), Kazys: " + str(kazys_taskai) + " (viso: " + str(kazys_viso) + ")")
+
+    if petras_viso >= 222 and kazys_viso >= 222:
+        if petras_viso > kazys_viso:
+            laimetojas = "Petras"
+            break
+        elif kazys_viso > petras_viso:
+            laimetojas = "Kazys"
+            break
+        else:
+            laimetojas = "Niekas – lygiosios"
+            break
+    elif petras_viso >= 222:
+        laimetojas = "Petras"
+        break
+    elif kazys_viso >= 222:
+        laimetojas = "Kazys"
+        break
+
+    partijos_nr += 1
+
+print("Žaidimą laimėjo: " + str(laimetojas))
+
+
+
 
 
 
