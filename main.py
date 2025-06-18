@@ -488,8 +488,39 @@ print(" ---------------------------- sunkesni 4.Masyvai 1 užduotis-------------
 
 #Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25
 
-masyvas = [random.randint(5,26) for _ in range(30)]
+masyvas = [random.randint(5,25) for _ in range(30)]
 print(masyvas)
 
+print()
 
+print(" ---------------------------- sunkesni 4.Masyvai 2 užduotis-----------------------------")
 
+#Naudodamiesi 1 uždavinio masyvu:
+#a) Suskaičiuokite kiek masyve yra reikšmių didesnių už 10;
+didesni_uz_10 = sum(
+    1 for i in masyvas
+    if i > 10)
+print(didesni_uz_10)
+
+#b) Raskite didžiausią masyvo reikšmę;
+max_reiksme = max(masyvas)
+print("Didžiausia reikšmė yra " + str(max_reiksme))
+
+#c) Suskaičiuokite visų reikšmių sumą
+suma = sum(masyvas)
+print("Visų reikšmių suma yra " + str(suma))
+
+#d) Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas
+naujas_masyvas = [reiksme - indeksas for indeksas, reiksme in enumerate(masyvas)]
+print("reikšmė - indeksas " + str(naujas_masyvas))
+
+#e) Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
+ilgis = len(masyvas)
+print(ilgis)
+masyvas.extend([random.randint(5, 25) for _ in range(10)])
+print(len(masyvas))
+
+#f) Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indekso reikšmių, o kitas iš porinių;
+
+poriniai = [masyvas[i] for i in range(len(masyvas)) if i % 2 == 0]
+neporiniai = [masyvas[i] for i in range(len(masyvas)) if i % 2 != 0]
