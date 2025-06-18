@@ -524,3 +524,7 @@ print(len(masyvas))
 
 poriniai = [masyvas[i] for i in range(len(masyvas)) if i % 2 == 0]
 neporiniai = [masyvas[i] for i in range(len(masyvas)) if i % 2 != 0]
+print("Poriniai " + str(poriniai))
+print("Neporiniai " + str(neporiniai))
+
+
